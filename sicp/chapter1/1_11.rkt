@@ -2,30 +2,22 @@
 
 (#%require rackunit)
 
-; reqursive process
-(define (f n)
-  (if (< n 3)
-    n
-    (+ (f (- n 1)) 
-       (f (- n 2))
-       (f (- n 3)))))
+;     1
+;    1 1
+;   1 2 1
+;  1 3 3 1
+; 1 4 6 4 1
 
-; iterative process
-(define (f-iter n)
-    (define (sub-iter a b c count)
-        (if (= count 3)
-            (+ a b c)
-            (sub-iter (+ a b c) a b (- count 1))))
-
-    (if (< n 3)
-        n
-        (sub-iter 2 1 0 n))
+(define (pascal-triangle row col)
+  (cond ((= col 1) 1)
+        ((= row col) 1)
+        (else (+ (pascal-triangle (- row 1) col)
+                (pascal-triangle (- row 1) (- col 1)))))
   )
 
-
-(check-equal? (f 1) 1) 
-(check-equal? (f 5) 11) 
-
-(check-equal? (f-iter 1) 1)
-(check-equal? (f-iter 5) 11)
+(check-equal? (pascal-triangle 1 1) 1)
+(check-equal? (pascal-triangle 3 2) 2)
+(check-equal? (pascal-triangle 4 3) 3)
+(check-equal? (pascal-triangle 5 2) 4)
+(check-equal? (pascal-triangle 5 3) 6)
 
