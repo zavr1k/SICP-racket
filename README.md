@@ -1,7 +1,10 @@
-# Sicp Racket Boilerplate
+# Sicp Solutions
 
 [![github action status](https://github.com/hexlet-boilerplates/sicp-racket/workflows/Racket%20CI/badge.svg)](https://github.com/hexlet-boilerplates/sicp-racket/actions)
 
+Solutions of exercises from the book "Structure and interpretation of computer programs".
+
+![hexlet-sicp](https://guides.hexlet.io/ru/assets/images/sicp/sicp.png)
 ### Requirements
 
 *  Racket
@@ -10,13 +13,5 @@
 *  [Racket-review](https://github.com/Bogdanp/racket-review) surface-level linter (`raco pkg install review`)
 *  Make
 
-### Using
-
-1.  Copy content of this repo (not clone!) to your repository
-2.  Write code (look `sicp/chapter1/02.rkt`)
-3.  Run tests `make test`
-4.  Run linter `make lint`
 
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=sicp-racket)
-
-This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet (in Russian)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=sicp-racket).
